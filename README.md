@@ -35,63 +35,56 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 
  - **Data understanding and EDA:**
 
-	  
-
 > **Introduction to the Dataset:**
-> 
-We are working on a dataset which contains record from the start of the first measure taken for the **Novel Coronavirus** which was later renamed to **Covid-19**.
+> We are working on a dataset which contains record from the start of the first measure taken for the **Novel Coronavirus** which was later renamed to **Covid-19**.
 > Our Dataset contains following columns: 
->  1   **ID** - Unique Number                  
- 2   **ISO** - iso3 code                 
- 3   **COUNTRY** - Name of the country                  
- 4   **REGION** - Continent                  
- 5   **LOG_TYPE** - Introduction / extension of measures, Phase-out of measures
- 6   **CATEGORY** - Measures Category              
- 7   **MEASURE** - Various method or rules applied to control the spread of the virus
- 8   **TARGETED_POP_GROUP**   - Yes or no in dropdown     
- 9   **COMMENTS**  - Comments or any others explanation for the measures      
- 10   **NON_COMPLIANCE**  - Additional rules to applied like fines etc.
- 11  **DATE_IMPLEMENTED** - Start of the measures in the country or part of the country       
- 12  **SOURCE** - Data source for the mentioned Measures                 
- 13  **SOURCE_TYPE** -  Data source type for the mentioned Measures         
- 14  **LINK** - Link for the given information or data           
- 15  **ENTRY_DATE** - Entry date of the given measure in the dataset          
- 16  **covid_case_per_date** - Positive case found the given date of implementation of the measure.
- 17  **population**  - Current population that country 
+
+
+> 1. **ID** - Unique Number 
+> 2. **ISO** - iso3 code 
+> 3. **COUNTRY** - Name of the country        
+> 4.  **REGION** - Continent
+> 5.  **LOG_TYPE** - Introduction / extension of measures, Phase-out of measures
+> 6. **CATEGORY** - Measures Category
+> 7.  **MEASURE** - Various method or rules applied to control the spread of the virus
+> 8.  **TARGETED_POP_GROUP**   - Yes or no in dropdown  
+> 9.  **COMMENTS**  - Comments or any others explanation for the measures  
+> 10.   **NON_COMPLIANCE**  - Additional rules to applied like fines etc.
+> 11.  **DATE_IMPLEMENTED** - Start of the measures in the country or part of the country       
+> 12. **SOURCE** - Data source for the mentioned Measures
+> 13. **SOURCE_TYPE** -  Data source type for the mentioned Measures
+> 14. **LINK** - Link for the given information or data
+> 15. **ENTRY_DATE** - Entry date of the given measure in the dataset  
+      
          
 >  For more detail, please check this readme file:     
 [https://www.acaps.org/sites/acaps/files/key-documents/files/acaps_-_covid-19_government_measures_dataset_readme.pdf](https://www.acaps.org/sites/acaps/files/key-documents/files/acaps_-_covid-19_government_measures_dataset_readme.pdf)
-
 > 
 > **EDA:**
 > 
-> We have used various visualization methods to analyze the correlation of each feature as part of EDA.
+> We have done EDA on our covid-19 dataset to analyze how different countries prepared themselves to fight the virus, after performing the initial data preparation.
 > More can be seen in the notebook in the folder with the name [**eda_code**](https://github.com/punitMashruwala/kdd_covid-19/tree/main/eda_code) or in the pdf file with the name: [**EDA - Jupyter Notebook.pdf**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/EDA%20-%20Jupyter%20Notebook.pdf)
 
 
  - **Date Preparation:**
+
  
-> - From 17 columns available in the dataset, we decided to drop some
-   column and we selected the following columns:
-     **COUNTRY**, 
- **CATEGORY**, 
- **MEASURE**, 
- **COMMENTS**,
-**DATE_IMPLEMENTED**, 
-**covid_case_per_date**, 
-**population** 
-And stored in this dataset in the variable **df**
-> - We scaled the **covid_case_per_date** column data to normalize and stored in the column: **log_value**
-> - Converted Datatype of Date column to DATETIME from OBJECT
-> - Checked for null values in all the data frames. We found around 60 Null values in the dataset. So we decided to drop those null values rows. 
-> - Now dataset was ready for modeling
+> - We added a new column '**covid_cases_per_date**' and '**population**' to the given dataset. The intention of adding this column was to see the impact of different measures taken by different countries to control the spread of the Pandemic. We got this data from **Wikipedia**
+> - From the 17 columns of the given dataset, we chose the following columns that seemed important to work on: 
+> 1. **COUNTRY**
+> 2. **CATEGORY** 
+> 3. **MEASURE**
+> 4. **COMMENTS**
+> 5. **DATE_IMPLEMENTED**
+> 6. **covid_case_per_date**
+> 7. **population** 
+
+> - We did the log normalization on the covid_cases_per_date column to normalize the column as it had a lot of variances.
+> - Converted datatype of 'date implementation' column from OBJECT to DATETIME
+> - We handled the missing data. We had around 60 records with missing values. And since the column 'DATE IMPLEMENTATION' had missing values, we dropped the records with missing values. It would have been incorrect to compute these missing values.
+> - This way the dataset was prepared for EDA and modeling
  
    
-
- 
-
-
-
 
  - **Machine Learning (if applicable - supervised, unsupervised):**
 	  *This is a work in progress*
