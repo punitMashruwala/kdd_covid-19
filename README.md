@@ -38,6 +38,7 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 	  
 
 > **Introduction to the Dataset:**
+> 
 We are working on a dataset which contains record from the start of the first measure taken for the **Novel Coronavirus** which was later renamed to **Covid-19**.
 > Our Dataset contains following columns: 
 >  1   **ID** - Unique Number                  
@@ -58,11 +59,12 @@ We are working on a dataset which contains record from the start of the first me
  16  **covid_case_per_date** - Positive case found the given date of implementation of the measure.
  17  **population**  - Current population that country 
          
-For more detail, please check this readme file:     
+>  For more detail, please check this readme file:     
 [https://www.acaps.org/sites/acaps/files/key-documents/files/acaps_-_covid-19_government_measures_dataset_readme.pdf](https://www.acaps.org/sites/acaps/files/key-documents/files/acaps_-_covid-19_government_measures_dataset_readme.pdf)
-> 
+
 > 
 > **EDA:**
+> 
 > We have used various visualization methods to analyze the correlation of each feature as part of EDA.
 > More can be seen in the notebook in the folder with the name [**eda_code**](https://github.com/punitMashruwala/kdd_covid-19/tree/main/eda_code) or in the pdf file with the name: [**EDA - Jupyter Notebook.pdf**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/EDA%20-%20Jupyter%20Notebook.pdf)
 
