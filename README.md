@@ -39,21 +39,23 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 > We are working on a dataset which contains record from the start of the first measure taken for the **Novel Coronavirus** which was later renamed to **Covid-19**.
 > Our Dataset contains following columns: 
 
-> 1   **ID** - Unique Number                  
-> 2   **ISO** - iso3 code                 
-> 3   **COUNTRY** - Name of the country                  
-> 4   **REGION** - Continent                  
-> 5   **LOG_TYPE** - Introduction / extension of measures, Phase-out of measures
-> 6   **CATEGORY** - Measures Category              
-> 7   **MEASURE** - Various method or rules applied to control the spread of the virus
-> 8   **TARGETED_POP_GROUP**   - Yes or no in dropdown     
-> 9   **COMMENTS**  - Comments or any others explanation for the measures      
-> 10   **NON_COMPLIANCE**  - Additional rules to applied like fines etc.
-> 11  **DATE_IMPLEMENTED** - Start of the measures in the country or part of the country       
-> 12  **SOURCE** - Data source for the mentioned Measures                 
-> 13  **SOURCE_TYPE** -  Data source type for the mentioned Measures         
-> 14  **LINK** - Link for the given information or data           
-> 15  **ENTRY_DATE** - Entry date of the given measure in the dataset  
+
+> 1. **ID** - Unique Number 
+> 2. **ISO** - iso3 code 
+> 3. **COUNTRY** - Name of the country        
+> 4.  **REGION** - Continent
+> 5.  **LOG_TYPE** - Introduction / extension of measures, Phase-out of measures
+> 6. **CATEGORY** - Measures Category
+> 7.  **MEASURE** - Various method or rules applied to control the spread of the virus
+> 8.  **TARGETED_POP_GROUP**   - Yes or no in dropdown  
+> 9.  **COMMENTS**  - Comments or any others explanation for the measures  
+> 10.   **NON_COMPLIANCE**  - Additional rules to applied like fines etc.
+> 11.  **DATE_IMPLEMENTED** - Start of the measures in the country or part of the country       
+> 12. **SOURCE** - Data source for the mentioned Measures
+> 13. **SOURCE_TYPE** -  Data source type for the mentioned Measures
+> 14. **LINK** - Link for the given information or data
+> 15. **ENTRY_DATE** - Entry date of the given measure in the dataset  
+      
          
 >  For more detail, please check this readme file:     
 [https://www.acaps.org/sites/acaps/files/key-documents/files/acaps_-_covid-19_government_measures_dataset_readme.pdf](https://www.acaps.org/sites/acaps/files/key-documents/files/acaps_-_covid-19_government_measures_dataset_readme.pdf)
@@ -65,16 +67,18 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 
 
  - **Date Preparation:**
+
  
 > - We added a new column '**covid_cases_per_date**' and '**population**' to the given dataset. The intention of adding this column was to see the impact of different measures taken by different countries to control the spread of the Pandemic. We got this data from **Wikipedia**
 > - From the 17 columns of the given dataset, we chose the following columns that seemed important to work on: 
-> **COUNTRY**
-> **CATEGORY** 
-> **MEASURE** 
-> **COMMENTS**
-> **DATE_IMPLEMENTED**
-> **covid_case_per_date**
-> **population** 
+> 1. **COUNTRY**
+> 2. **CATEGORY** 
+> 3. **MEASURE**
+> 4. **COMMENTS**
+> 5. **DATE_IMPLEMENTED**
+> 6. **covid_case_per_date**
+> 7. **population** 
+
 > - We did the log normalization on the covid_cases_per_date column to normalize the column as it had a lot of variances.
 > - Converted datatype of 'date implementation' column from OBJECT to DATETIME
 > - We handled the missing data. We had around 60 records with missing values. And since the column 'DATE IMPLEMENTATION' had missing values, we dropped the records with missing values. It would have been incorrect to compute these missing values.
