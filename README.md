@@ -106,7 +106,7 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 	 - We have built a model to forecast the number of COVID cases across the world.
 > -  In the first predictive model, we have forecasted the Rate of Positivity taking into account Interventions in Australia. For example, Australia took the measure "Border closure" on 03/20/2020.So we have considered such intervention to forecast the rate of positivity. 
 > -  We have used the Prophet class and performed cross-validation on it. After calculating metrics such as MAE, MSE, or RMSE with built-in functions, we have plotted the estimated errors across the horizon.
-> - More information is available in the notebook in the folder with the name [**FB Model**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/Modeling_with_FB_Prophet.ipynb) or in the pdf file with the name: [**Fb Model - Jupyter Notebook.pdf**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/model_prediction_FB.pdf)
+> - More information is available in the notebook [**FB Model**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/Modeling_with_FB_Prophet.ipynb) or in the pdf file with the name: [**Fb Model - Jupyter Notebook.pdf**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/model_prediction_FB.pdf)
 > - Coronavirus spread has conducted the society under the edge of loss in social lives. Additionally, it is crucial to investigate the transmission growth ahead and predict the future occurrences of the transmission. So, In the second prediction model, we have forecasted the number of COVID cases across the world by building SVM model and Polynomial regression model. 
 > - The metrics used for SVR and Polynomial regression model are mean absolute error and mean squared error:
 	  **SVR:**
@@ -115,7 +115,7 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 	**Linear Regression:**
 	MAE: 760076.3281707081
 	MSE: 1467099793394.4988
-> - More information is available in the notebook in the folder with the name [**Model**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/prediction_model.ipynb) or in the pdf file with the name: [**Model - Jupyter Notebook.pdf**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/model_prediction.pdf)
+> - More information is available in the notebook  [**Model**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/prediction_model.ipynb) or in the pdf file with the name: [**Model - Jupyter Notebook.pdf**](https://github.com/punitMashruwala/kdd_covid-19/blob/main/model/model_prediction.pdf)
 
  - **Evaluation:**
  
