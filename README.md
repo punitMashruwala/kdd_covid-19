@@ -131,6 +131,6 @@ Our aim is to analyze the rise/fall in the number of Covid-19 cases before and a
 > - We learned how to deal with time-series data and we were able to build predictive model to forecast the number of COVID Case across the world.
 
 **Future Work**
->- We can perform association rule analysis on this dataset.
+>- We can perform an association rule analysis on this dataset.
 
 
